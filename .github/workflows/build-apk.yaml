@@ -19,6 +19,8 @@ jobs:
       
       - name: "not a TTY! dirty patch androidjs-builder"  
         run: | 
+          ls /usr/local/lib
+          ls /usr/local/lib/node_modules
           sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/\sprogress.start();//g" {} \;
           androidjs build --release
 
