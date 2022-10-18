@@ -11,7 +11,7 @@ jobs:
         with:
           distribution: 'temurin' 
           java-version: '17'
-       - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
       - run: npm install androidjs
@@ -23,8 +23,8 @@ jobs:
           androidjs build --release
           sudo chmod 777 dist/ventilateur.apk
  
-    - name: Release
-      uses: softprops/action-gh-release@v1
-      with:
-        tag_name: Android
-        files: dist/ventilateur.apk
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: Android
+          files: dist/ventilateur.apk
