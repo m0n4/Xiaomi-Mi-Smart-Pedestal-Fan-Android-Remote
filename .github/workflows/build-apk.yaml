@@ -1,6 +1,6 @@
 name: compile
 
-on: [push, fork]
+on: [push]
 
 jobs:
   build_apk:
