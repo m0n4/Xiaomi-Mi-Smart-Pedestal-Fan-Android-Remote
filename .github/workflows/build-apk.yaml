@@ -17,6 +17,7 @@ jobs:
       - run: sudo npm install androidjs
       - run: sudo npm install -g androidjs-builder
       - run: sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/\sprogress.start();//g" {} \;
+      - run: grep -r "progress.start()" /usr/local/lib/node_modules/androidjs-builder
       - run: androidjs build --release
 
       - name: Release
