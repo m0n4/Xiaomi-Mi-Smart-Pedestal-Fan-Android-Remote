@@ -17,11 +17,9 @@ jobs:
       - run: sudo npm install androidjs
       - run: sudo npm install -g androidjs-builder
       
-      - name: "not a TTY! dirty patch androidjs-builder"  
+      - name: "not a TTY! need to patch androidjs-builder"  
         run: | 
-          ls /usr/local/lib/node_modules
-          ls /usr/lib/node_modules
-          sudo find /opt/hostedtoolcache/node/16.17.1/x64/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/\sprogress.start();//g" {} \;
+          sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/\sprogress.start();//g" {} \;
           androidjs build --release
 
       - name: Release
