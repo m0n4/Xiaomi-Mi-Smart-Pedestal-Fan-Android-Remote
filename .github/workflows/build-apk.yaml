@@ -19,7 +19,6 @@ jobs:
       
       - name: Build App
         run: |
-          cd Xiaomi-Mi-Smart-Pedestal-Fan-Android-Remote/
           androidjs build --release
           sudo chmod 777 dist/ventilateur.apk
  
