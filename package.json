@@ -1,0 +1,24 @@
+{
+  "name": "ventilateur",
+  "app-name": "Ventilateur",
+  "package-name": "mypkgfan",
+  "description": "Control dmaker.fan.p5",
+  "project-type": "webview",
+  "icon": "./assets/icon/icon.png",
+  "permission": [
+    "android.permission.INTERNET"
+  ],
+  "version": "1.0.0",
+  "dist-path": "./dist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Error: no test specified && exit 1"
+  },
+  "author": "M0N4",
+  "license": "ISC",
+  "dependencies": {
+    "androidjs": "^2.0.4",
+    "miio-api": "^0.4.1",
+    "miio-cli": "^0.1.0"
+  }
+}
