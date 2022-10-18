@@ -1,0 +1,30 @@
+name: compile
+
+on: [push, fork]
+
+jobs:
+  build_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' 
+          java-version: '17'
+       - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install androidjs
+      - run: npm install -g androidjs-builder
+      
+      - name: Build App
+        run: |
+          cd Xiaomi-Mi-Smart-Pedestal-Fan-Android-Remote/
+          androidjs build --release
+          sudo chmod 777 dist/ventilateur.apk
+ 
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: Android
+        files: dist/ventilateur.apk
