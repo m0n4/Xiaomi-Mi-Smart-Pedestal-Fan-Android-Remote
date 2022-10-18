@@ -19,6 +19,7 @@ jobs:
       - run: sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/state.progress.start();//g" {} \;
       - run: sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/progress.start();//g" {} \;
       - run: sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/process.stdout.clearLine();//g" {} \;
+      - run: sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/process.stdout.cursorTo(0);//g" {} 
       - run: androidjs build --release
 
       - name: Release
