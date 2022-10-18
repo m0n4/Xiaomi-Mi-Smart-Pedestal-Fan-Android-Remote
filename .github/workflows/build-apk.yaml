@@ -16,11 +16,8 @@ jobs:
           node-version: 16
       - run: sudo npm install androidjs
       - run: sudo npm install -g androidjs-builder
-      
-      - name: "not a TTY! need to patch androidjs-builder"  
-        run: | 
-          sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/\sprogress.start();//g" {} \;
-          androidjs build --release
+      - run: sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/\sprogress.start();//g" {} \;
+      - run: androidjs build --release
 
       - name: Release
         uses: softprops/action-gh-release@v1
