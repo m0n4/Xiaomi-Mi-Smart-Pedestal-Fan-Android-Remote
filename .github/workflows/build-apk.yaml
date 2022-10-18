@@ -16,7 +16,11 @@ jobs:
           node-version: 16
       - run: npm install androidjs
       - run: npm install -g androidjs-builder
-      - run: androidjs build --release > /dev/null 2>&1
+      
+      - name: "not a TTY! dirty patch androidjs-builder"  
+        run: | 
+          sudo find /usr/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/\sprogress.start();//g" {} \;
+          androidjs build --release
 
       - name: Release
         uses: softprops/action-gh-release@v1
