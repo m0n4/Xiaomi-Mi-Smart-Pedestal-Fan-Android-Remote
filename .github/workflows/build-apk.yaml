@@ -14,14 +14,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install androidjs
-      - run: npm install -g androidjs-builder
+      - run: sudo npm install androidjs
+      - run: sudo npm install -g androidjs-builder
       
       - name: "not a TTY! dirty patch androidjs-builder"  
         run: | 
-          find / -type d -name "androidjs-builder" 2>/dev/null
           ls /usr/local/lib/node_modules
-          sudo find /usr/local/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/\sprogress.start();//g" {} \;
+          ls /usr/lib/node_modules
+          sudo find /opt/hostedtoolcache/node/16.17.1/x64/lib/node_modules/androidjs-builder -type f -exec sed -i -e "s/\sprogress.start();//g" {} \;
           androidjs build --release
 
       - name: Release
