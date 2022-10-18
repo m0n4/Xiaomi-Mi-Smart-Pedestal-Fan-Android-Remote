@@ -3,7 +3,7 @@ name: compile
 on: [push, fork]
 
 jobs:
-  build_linux:
+  build_apk:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,12 +16,8 @@ jobs:
           node-version: 16
       - run: npm install androidjs
       - run: npm install -g androidjs-builder
-      
-      - name: Build App
-        run: |
-          androidjs build --release
-          sudo chmod 777 dist/ventilateur.apk
- 
+      - run: androidjs build --release > /dev/null 2>&1
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
