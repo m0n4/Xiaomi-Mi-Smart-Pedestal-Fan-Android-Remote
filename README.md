@@ -28,5 +28,5 @@ then simply use [Xiaomi Cloud Tokens Extractor](https://github.com/PiotrMachowsk
 ![preview](https://user-images.githubusercontent.com/29152432/196554333-df42539a-9c2d-44d9-9c1d-37ff2f3d567d.png)
 
 ## Credits
-[Andreas Holstenson](https://github.com/aholstenson) for the miIO Device Library on which this application is based
+[Andreas Holstenson](https://github.com/aholstenson) for the miIO Device Library on which this application is based  
 [Piotr Machowski](https://github.com/PiotrMachowski) for the Xiaomi Cloud Tokens Extractor
