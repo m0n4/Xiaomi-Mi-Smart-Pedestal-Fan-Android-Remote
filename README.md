@@ -8,7 +8,7 @@
  - Download the APK from the [release section](https://github.com/m0n4/Xiaomi-Mi-Smart-Pedestal-Fan-Android-Remote/releases/tag/Android)
 
 ## Misc
- - Swipe down to refresh
+ - Pull to refresh
  - Retrieving token from cloud [Xiaomi Cloud Tokens Extractor](https://github.com/PiotrMachowski/Xiaomi-cloud-tokens-extractor)
  - Works with Mi Smart Standing Fan 1C
 
