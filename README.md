@@ -5,7 +5,7 @@
 ## How to build
  - Clone this repository
  - Set you token and IP in [main.js](https://github.com/m0n4/Xiaomi-Mi-Smart-Pedestal-Fan-Android-Remote/blob/main/main.js)
- - Download the APK from the [release section] of your repository (https://github.com/m0n4/Xiaomi-Mi-Smart-Pedestal-Fan-Android-Remote/releases/tag/Android)
+ - Download the APK from the [release section](https://github.com/m0n4/Xiaomi-Mi-Smart-Pedestal-Fan-Android-Remote/releases/tag/Android) of your repository 
 
 ## Getting your token and IP 
 provisioning the fan requires a mi cloud account  
